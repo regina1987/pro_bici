@@ -1,4 +1,4 @@
-class ProductosController < ApplicationController
+class ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_cts, only: [:new, :edit, :create, :update]
    before_action :set_pr, only: [:show, :edit, :update, :destroy]
@@ -35,7 +35,7 @@ class ProductosController < ApplicationController
     end
 
     def pr_params
-        params.require(:pr).permit(:brand, :code, :name, :quantity, :price, :category_id)
+        params.require(:product).permit(:brand, :code, :name, :quantity, :price, :category_id)
     end
     def set_cts
        @cts_array=Category.order(:name).pluck(:name, :code,  :iden)

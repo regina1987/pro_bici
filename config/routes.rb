@@ -10,11 +10,11 @@ Rails.application.routes.draw do
      patch 'products/:id', to: 'products#update', as:'product'
 
      get 'categories/index', to: 'categories#index'
-     get 'categories/:id', to: 'categories#show', as: 'categories_show'
      get 'categories/new', to: 'categories#new', as:'categories_new'
+
      post 'categories', to: 'categories#create'
      delete 'categories/:id', to: 'categories#destroy', as: 'categories_delete'
-     get 'categories/:id/edit', to: 'categories#edit', as:'categories_user'
+     get 'categories/:id/edit', to: 'categories#edit', as:'categories_edit'
      patch 'categories/:id', to: 'categories#update', as:'category'
 
   get 'home/index', to: 'home#index'

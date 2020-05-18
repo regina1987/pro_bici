@@ -1,0 +1,23 @@
+
+<%= form_with(model: cat, local: true) do |f| %>
+
+<div class="field">
+  <div class="field">
+    <%= f.label :iden %>
+    <%= f.text_field :iden %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+  </div>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+
+
+
+<%= submit_tag("Create") %>
+<% end %>

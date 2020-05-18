@@ -1,10 +1,11 @@
 class CategoriesController < ApplicationController
 before_action :authenticate_user!
- before_action :set_ct, only: [:show, :edit, :update, :destroy]
+ before_action :set_ct, only: [ :edit, :update, :destroy]
 
  def index
    @cts=Category.all
  end
+
   def new
     @ct=Category.new
   end
@@ -22,6 +23,8 @@ before_action :authenticate_user!
   def edit
   end
 
+
+
   def update
     @ct.update(ct_params)
     redirect_to root_path
@@ -33,7 +36,7 @@ before_action :authenticate_user!
   end
 
   def ct_params
-      params.require(:ct).permit(:iden, :code, :name)
+      params.require(:category).permit(:iden, :code, :name)
   end
 
 
