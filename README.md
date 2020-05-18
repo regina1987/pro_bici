@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+El proyecto es un ejemplo de aplicación web construida con Ruby on Rails 5.2.3
+antes de trabajar bundle install
+                  rails db:migrate
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  escema de proyecto ![Screenshot](0001.jpg)                

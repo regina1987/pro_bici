@@ -13,12 +13,12 @@ before_action :authenticate_user!
   def create
     @ct=Category.new(ct_params)
     @ct.save
-      redirect_to root_path
+    redirect_to categories_index_path
   end
 
   def destroy
     @ct.destroy
-    redirect_to root_path
+    redirect_to categories_index_path
   end
   def edit
   end
@@ -27,7 +27,7 @@ before_action :authenticate_user!
 
   def update
     @ct.update(ct_params)
-    redirect_to root_path
+    redirect_to categories_index_path
   end
 
   private

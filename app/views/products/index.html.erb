@@ -1,24 +1,30 @@
-<h1>Ctegories</h1>
+<h1>Products</h1>
 <table  class="table table-striped">
   <thead>
     <tr>
-      <th>Identificator</th>
+      <th>name</th>
       <th>Code</th>
-      <th>Name</th>
+      <th>quantity</th>
+      <th>category</th>
+      <th>price</th>
+      <th>brand</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @cts.each do |ct| %>
+    <% @prs.each do |pr| %>
       <tr>
-        <td><%= ct.iden %></td>
-        <td><%= ct.code %></td>
-        <td><%= ct.name %></td>
-        <td><%= link_to 'Edit', categories_edit_path(ct)%></td>
-        <td><%= link_to 'Destroy',categories_delete_path(ct), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+        <td><%= pr.name %></td>
+        <td><%= pr.code %></td>
+        <td><%= pr.quantity %></td>
+        <td><%= pr.category.name %></td>
+        <td><%= pr.price %></td>
+        <td><%= pr.brand %></td>
+        <td><%= link_to 'Edit', edit_products_path(pr)%></td>
+        <td><%= link_to 'Destroy',products_delete_path(pr), method: :delete, data: { confirm: 'Are you sure?' }%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'add new category', categories_new_path%>
+<%= link_to 'add new product', products_new_path%>
