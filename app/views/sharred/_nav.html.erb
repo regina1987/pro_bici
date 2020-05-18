@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <%= image_tag '1.jpg', class: ' img-fluid', style: 'height:70px'  %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Home", root_path, class: "navbar-brand pl-4 h6" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "Category", categories_index_path, class: "navbar-brand pl-4 h6" %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to "Product", products_index_path, class: "navbar-brand pl-4 h6" %>
+      </li>
+
+      <% if user_signed_in?%>
+      <li>Hola, <%= current_user.email %>
+      <%= link_to 'Cerrar_sesion', destroy_user_session_path, method: :delete %>
+      </li>
+      <% end %>
+    </ul>
+
+  </div>
+</nav>
